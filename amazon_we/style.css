@@ -1,16 +1,23 @@
 *{
     margin: 0;
+    padding: 0;
     font-family: Arial;
-    border: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e2e7e6;
 }
 
 .navbar{
-    height: 60px;
+    min-height: 60px;
     background-color: #0f1111;
-    color:white;
-    display :flex;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
 }
 
 .nav-logo{
@@ -51,27 +58,32 @@
 
 /** box3 **/
 .nav-search{
-    display :flex;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #ac8b45;
-    width: 620px;
+    width: auto;
+    flex: 1 1 220px;
+    min-width: 180px;
+    max-width: 620px;
     height: 40px;
     border-radius: 5px;
-
 }
 
 .search-select{
     background-color: #f3f3f3;
-    width: 50px;
-    text-align:center;
+    width: 60px;
+    text-align: center;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border:none;
+    border: none;
+    padding: 0 0.25rem;
 }
 .search-input{
-    width:100%;
+    width: 100%;
     font-size: 1rem;
-    border:none;
+    border: none;
+    padding: 0 0.5rem;
 }
 .search-icon{
     width: 50px;
@@ -188,9 +200,95 @@ span{
 
 }
 .box-content{
-    margin-left: 1rem ;
-    margin-right: 1rem;
+    margin: 0;
 }
 .box-content p{
     color: #007185;
 }
+
+@media (max-width: 1024px) {
+    .box{
+        width: 48%;
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        justify-content: center;
+        padding: 0.75rem 0.75rem;
+    }
+    .navbar > div{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-search{
+        width: 100%;
+        max-width: none;
+    }
+    .nav-address,
+    .nav-signin,
+    .nav-return,
+    .panel-all,
+    .panel-deals{
+        display: none;
+    }
+    .nav-cart{
+        width: 100%;
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+    .panel{
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .panel-ops{
+        justify-content: center;
+        width: 100%;
+    }
+    .hero-section{
+        min-height: 260px;
+        align-items: center;
+        padding: 1rem 0;
+        background-position: center;
+    }
+    .hero-msg{
+        width: 95%;
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    .box{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.foot-panel{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.85rem;
+
+}
+
+.foot-panel2{
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    display: flex;
+
+
+
+}
+ul{
+    margin-top: 20px;
+}
+ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+}
+
